@@ -1,4 +1,4 @@
-# ESP32 WiFi Hash Monster
+# ESP32 WiFi Hash Monster Odroid-Go Hardkernel
 
 <p align="center">
     <a href="https://github.com/G4lile0/ESP32-WiFi-Hash-Monster/blob/master/README.md"><img alt="Software License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
