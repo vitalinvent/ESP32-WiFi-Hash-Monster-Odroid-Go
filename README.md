@@ -1,8 +1,5 @@
 # ESP32 WiFi Hash Monster
 
-![20220809_183919~01](https://user-images.githubusercontent.com/3478676/183697646-b01204fd-e192-4dbe-9b59-9005b92e38e9.jpg)
-
-
 <p align="center">
     <a href="https://github.com/G4lile0/ESP32-WiFi-Hash-Monster/blob/master/README.md"><img alt="Software License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
     <a href="https://github.com/G4lile0/ESP32-WiFi-Hash-Monster/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/G4lile0/ESP32-WiFi-Hash-Monster"/></a>
@@ -13,8 +10,7 @@ WiFi Hash Purple Monster, store EAPOL &amp; PMKID packets in an SD CARD using a 
 
 90% of the code is based on the great [PacketMonitor32](https://github.com/spacehuhn/PacketMonitor32/) from   &nbsp; <a href="https://twitter.com/intent/follow?screen_name=spacehuhn"><img src="https://img.shields.io/twitter/follow/spacehuhn?style=social&logo=twitter" alt="follow on Twitter"></a> and the port to [M5Stack](https://m5stack.com/) from [macsbug](https://macsbug.wordpress.com/2018/01/11/packetmonitor32-with-m5stack/). It was a challenge to see if I could mimic the operation of [pwnagotchi](https://github.com/evilsocket/pwnagotchi)
 <a href="https://twitter.com/intent/follow?screen_name=pwnagotchi"><img src="https://img.shields.io/twitter/follow/pwnagotchi?style=social&logo=twitter" alt="follow on Twitter"></a> in an ESP32 SoC.
-
-![ui](./images/m5stack_ESP32_hash_monster.jpg)
+![20220809_183919~01](https://user-images.githubusercontent.com/3478676/183698144-d4a8b7a2-690d-4e62-ab06-f5c437e532eb.jpg)         ![m5stack_ESP32_hash_monster](https://user-images.githubusercontent.com/3478676/183699084-df83cd03-0083-4af9-9a0e-3779fff85050.jpg)
 
 When a wifi device connect to an AP with WPA2/PSK instead of sharing the wifi key they exchange 4 EAPOL messages, this method is known as the 4-way handshake, capturing these 4 packets is possible to guess the password using dictonary attacks or brute force attack, recentely there is a more efficent way to calculate the wifi key using just one PMKID packet.
 
