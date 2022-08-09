@@ -12,7 +12,7 @@
 //     * SD Activation => BtnA (A for Activation)
 //     * Brightness => BtnB (B for Brightness)
 //     * Channel => BtnC (C for Channel)
-//   - seamless Odroid-GO support (if using https://github.com/tobozo/ESP32-Chimera-Core instead of M5Stack Core)
+//   - seamless Odroid-GO support (if using httSDps://github.com/tobozo/ESP32-Chimera-Core instead of M5Stack Core)
 //  added channel auto-switching (configurable) and reduce the amount of drawing by scriptguru  10/April/2020
 //
 //
@@ -28,7 +28,7 @@
 #define tft M5.Lcd
 #if !defined USE_M5STACK_UPDATER
   // comment this out to disable SD-Updater
-  #define USE_M5STACK_UPDATER
+  //#define USE_M5STACK_UPDATER
 #endif
 
 #ifdef USE_M5STACK_UPDATER
@@ -364,7 +364,7 @@ void setup()
   #ifdef ARDUINO_M5STACK_Core2
     // specific M5Core2 tweaks go here
   #else // M5Classic / M5Fire turn buzzer off
-    M5.Speaker.write(0);
+    //M5.Speaker.write(0);
   #endif
 
   xTaskCreatePinnedToCore( bootAnimationTask, "bootAnimationTask", 8192, NULL, 16, NULL, RUNNING_CORE);
@@ -503,7 +503,7 @@ static void bootAnimationTask( void* param )
     if(  (xdir == 1  && xpos+xdir >= tft.width()-64)
       || (xdir == -1 && xpos+xdir < 0 ) ) {
       xdir = -xdir;
-      imgId = random()%13;
+      imgId = random(1,0)%13;
     }
     xpos += xdir*hstep;
     vcursor += vstep;
